@@ -1,0 +1,116 @@
+body{
+	background-color:#F0F0F0;
+}
+header{
+	width:100%;
+	position:fixed;
+	height:50px;
+	font-weight:bold;
+	background-color:#ccc;
+	overflow:hidden;
+	z-index:2;
+	box-sizing:border-box;
+	padding:10px 10px 0px 10px;
+}
+header nav{
+	float:right;
+	padding-top:5px;
+}
+header h2{
+	display: inline;
+	position: absolute;
+	font-size: 30px;
+}
+header nav ul li{
+	display:inline;
+	background-color:#E1E1E1;
+	padding:5px 15px;
+}
+
+.page-content{
+	padding-top:50px;
+}
+
+.page-content .main-carousel{
+	width:100vw;
+	height:400px;
+	overflow:hidden;
+	position:relative;
+	z-index:1;
+}
+
+.page-content .main-carousel .carousel-next,
+.page-content .main-carousel .carousel-prev{
+	position:absolute;
+	top:50%;
+	padding:20px;
+	background-color:rgba(200,200,200,1);
+	cursor:pointer;
+	margin-top:-25px;
+}
+
+.page-content .main-carousel .carousel-next{
+	right:0;
+}
+
+.page-content .main-carousel .carousel-prev{
+	left:0;
+}
+
+.page-content .main-carousel .carousel-cells{
+	width:99999px;
+	height:100%;
+	background-image: url("../img/slide-background.jpg");
+	-webkit-transition: margin-left 1.0s;
+	transition: margin-left 1.0s;
+}
+
+.page-content .main-carousel .carousel-cells article{
+	width:100vw;
+	height:100%;
+	float:left;
+	display:flex;
+	background-color:white;
+}
+.page-content .main-carousel .carousel-cells article .slide-text{
+	text-align:center;
+	margin:auto;
+}
+.page-content .main-carousel .carousel-cells article .slide-text h1{
+	font-size:50px;
+}
+.page-content .column-content{
+	padding-left:1%;
+	padding-top: 20px;
+}
+.page-content .column-content h1{
+	font-size:20px;
+}
+.page-content .column-content .three-columns{
+	padding-top:20px;
+}
+
+.page-content .column-content .three-columns .list-block ul{
+	list-style-type:none;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+@media (min-width:767px){
+	.page-content .column-content .three-columns .list-block{
+		display:inline-grid;
+		width:24%;
+	}
+}
+
+@media (max-width: 767px) {
+	.page-content .column-content .three-columns{
+		-webkit-columns: 100px 3;
+	  -moz-columns: 100px 3;
+	  columns: 100px 3;
+	}
+
+	.page-content .column-content .three-columns .list-block{
+		-webkit-column-break-inside: avoid;
+	}
+}
